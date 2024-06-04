@@ -8,6 +8,9 @@
      color: rgb(222, 84, 153);
      font-family: 'Poppins', sans-serif;
  }
+ header {
+    width: 100%;
+}
 
  nav {
      display: flex;
@@ -22,6 +25,7 @@
      top: 0;
      /* background-color: black; */
      z-index: 1000;
+     padding: 0 10px;
  }
 
  nav ul {
@@ -46,13 +50,16 @@
 
  .firstSection {
      display: flex;
+     flex-wrap: wrap;
      align-items: center;
      justify-content: space-around;
      margin: 180px 0 100px 0;
+     padding: 0 20px;
  }
 
  .firstSection>div {
      width: 30%;
+     min-width: 280px;
  }
 
  .leftSection {
@@ -82,8 +89,8 @@
  }
 
  .rightSection img {
-     width: 80%;
-     height: 80%;
+     width: 90%;
+     height: auto;
      /* margin: 50px 0; */
      animation-name: rightSectionimg;
      animation-duration: 4s;
@@ -125,21 +132,25 @@
  .and {
      color: rgb(38, 65, 67);
  }
+ #element{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+ }
 
  .secondSection {
      font-size: 30px;
      /* display: flex; */
-     align-items: center;
      text-align: center;
-     justify-content: space-around;
+     padding: 30px 50px;
      /* margin: 80px 0; */
-     animation-name: secondSection;
-     animation-duration: 4s;
-     animation-fill-mode: forwards;
+     /* animation-name: secondSection; */
+     /* animation-duration: 4s; */
+     /* animation-fill-mode: forwards; */
      /* animation-iteration-count: infinite; */
  }
 
- @keyframes secondSection {
+ /* @keyframes secondSection {
      from {
          transform: translateY(20%);
      }
@@ -147,11 +158,13 @@
      to {
          transform: translateY(0%);
      }
- }
+ } */
 
  .aboutimage {
      display: flex;
+     /* flex-wrap: wrap; */
      padding: 50px;
+     /* flex-direction: row; */
      /* width: 30%; */
      /* height: 500px; */
      /* margin: 30px 30px 0px 150px; */
@@ -159,9 +172,11 @@
  }
 
  .aboutimage img {
+    width: 100%;
      height: auto;
+     max-width: 400px;
      width: 400px;
-     margin-left: 150px;
+     margin: 0 auto;
  }
 
  .about-sec {
@@ -177,22 +192,22 @@
  .button {
      text-align: center;
      text-decoration: none;
-     font-size: 25px;
      border-radius: 15px;
-     display: inline-block;
+     /* display: inline-block; */
      background-color: rgb(222, 84, 153);
      border-color: rgb(222, 84, 153);
      color: rgb(38, 65, 67);
-     margin-left: 500px;
+     margin-right: 10px;
+     font-size: 20px;
      padding: 7px;
  }
 
  .thirdSection h1 {
-     max-width: 80vw;
+     max-width: 100%;
      margin: 80px 0;
      align-items: center;
      text-align: center;
-     margin-left: 125px;
+     /* margin-left: 125px; */
      text-decoration: underline;
  }
 
@@ -202,12 +217,12 @@
 
  .thirdSection .horizontalLine {
      background-color: rgb(38, 65, 67);
-     width: 70vw;
+     width: 80%;
      height: 2px;
      display: flex;
-     /* justify-content: center; */
-     margin: 56px 0px 56px 200px;
- }
+     justify-content: center;
+     margin: 56px auto;
+}
 
  .thirdSection .verticalLine {
      height: 60px;
@@ -244,7 +259,7 @@
 
  .skillsSection h1 {
      /* text-decoration: underline; */
-     max-width: 80vw;
+     max-width: 100%;
      margin: 80px 0;
      align-items: center;
      text-align: center;
@@ -274,7 +289,7 @@
 
  }
 
- @keyframes rightContactSection {
+ /* @keyframes rightContactSection {
      0% {
          transform: translateX(0%);
      }
@@ -282,7 +297,7 @@
      100% {
          transform: translateX(-150%);
      }
- }
+ } */
 
  .leftContactSection {
      animation-name: leftContactSection;
@@ -292,7 +307,7 @@
 
  }
 
- @keyframes leftContactSection {
+ /* @keyframes leftContactSection {
      0% {
          transform: translateX(0%);
      }
@@ -300,7 +315,7 @@
      100% {
          transform: translateX(80%);
      }
- }
+ } */
 
  .skillslogo img {
      width: 100px;
@@ -517,3 +532,45 @@
      padding: 0;
      margin: 0;
  }
+
+ /* @media (max-width:1024px) {
+    .right{
+       display: none;
+    }
+}
+@media (max-width:1280px) {
+    .leftSection, .rightSection{
+        justify-content: center;
+    }
+}
+@media (max-width:930px) {
+    .leftSection, .rightSection{
+        align-items: baseline;
+    }
+} */
+@media (max-width: 768px) {
+   
+    .right{
+        display: none;
+     }
+    .firstSection, .secondSection, .thirdSection, .skillsSection, .projects, .contactSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leftSection, .rightSection {
+        width: 100%;
+    }
+
+    .aboutimage {
+        flex-direction: column;
+    }
+
+    .about-sec {
+        text-align: center;
+        margin: 20px 0;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
