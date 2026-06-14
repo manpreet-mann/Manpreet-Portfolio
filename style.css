@@ -499,7 +499,7 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     background-color: rgba(232, 174, 244, 0.9);
+     background-color: rgb(222, 84, 153, 0.9);
      transition: opacity 0.1s ease-in;
  }
 
@@ -548,6 +548,7 @@
         align-items: baseline;
     }
 } */
+
 @media (max-width: 768px) {
    
     .right{
@@ -572,5 +573,51 @@
     }
     body{
         overflow-x: hidden;
+    }
+}
+@media (max-width: 768px) {
+    .skillslogo {
+        flex-direction: column;
+    }
+
+    .skillslogo img {
+        margin: 10px auto;
+    }
+
+    .skillslogo p {
+        margin: 5px auto;
+    }
+    .skillsSection {
+        flex-direction: column;
+        text-align: center;
+        margin: 100px auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .skillslogo {
+        flex-direction: column;
+    }
+
+    .skillslogo img {
+        margin: 10px auto;
+    }
+
+    .skillslogo p {
+        margin: 5px auto;
+    }
+    .skillsSection{
+        width: 100%;
+    }
+    #portfolio{
+        justify-content: center;
+        width: 100%;
+    }
+    .contactSection{
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
     }
 }
